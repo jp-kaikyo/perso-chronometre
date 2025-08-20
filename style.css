@@ -1,0 +1,17 @@
+/* variable des couleur */
+:root {
+    --fond-principal:#0F0F0F;
+    --font-contenu:#1A1A1A;
+    --font-contours:#2E2E2E;
+    --texte-titre:#ffffff;
+    --texte-courant:#d1d1d1;
+    --texte-lien:#6f6f6f;
+    --objet-survol:#6E40C9;
+    --objet-permanent:#8B5CF6; 
+    --objet-clic:#9B6DED;
+}
+
+
+body {
+    background-color: var(--fond-principal);
+}
