@@ -1,4 +1,5 @@
 /* variable des couleur */
+
 :root {
     --fond-principal:#0F0F0F;
     --font-contenu:#1A1A1A;
@@ -16,7 +17,6 @@
 
 /* css principal */
 
-
 body {
     background-color: var(--fond-principal);
 }
@@ -24,6 +24,7 @@ body {
 h1 {
     color: var(--texte-titre);
     text-align: center;
+    font-size: 2em;
 }
 
 
@@ -47,12 +48,18 @@ h1 {
 .affichage {
     color: var(--texte-courant);
     border: solid 1px var(--objet-permanent);
-    margin: 10px 80px 10px 80px;
+    margin: 10px 80px 25px 80px;
     padding: 10px 0px 10px 0px;
     border-radius: 25px;
 }
 
-.button {
+#temps {
+    font-size: 4em;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.btn {
     text-align: center;
     color: var(--objet-permanent);
     display: flex;
