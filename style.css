@@ -1,12 +1,15 @@
-/* variable des couleur */
+/* ==== PALETTE DES COULEURS ==== */
+
 
 :root {
     --fond-principal:#0F0F0F;
     --font-contenu:#1A1A1A;
     --font-contours:#2E2E2E;
+    
     --texte-titre:#ffffff;
     --texte-courant:#d1d1d1;
     --texte-lien:#6f6f6f;
+    
     --objet-survol:#6E40C9;
     --objet-permanent:#8B5CF6; 
     --objet-clic:#9B6DED;
@@ -15,24 +18,32 @@
 
 
 
-/* css principal */
+/* ==== PALETTE DES TEXTES ==== */
 
-body {
-    background-color: var(--fond-principal);
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+:root {
+    --police-titre: Georgia, "Times New Roman", serif;
+    --taille-titre-principal: 2.5rem;  /* h1 */
+    --gras-titre: 700;
+    --gras-texte: 400;
 }
 
 h1 {
+    font-family: var(--police-titre);
+    font-weight: var(--gras-titre);
     color: var(--texte-titre);
-    text-align: center;
-    font-size: 2em;
+    margin-bottom: 0.5em;
 }
 
 
 
 
-/* contenu */
+/* ==== PALETTE DES BULLE ==== */
 
-.contenu {
+
+.bulle_principal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,6 +54,16 @@ h1 {
     margin: 14% 25% 14% 25%;
     border: solid;
     color: var(--font-contours);
+}
+
+
+
+
+/* ==== CSS PRINCIPAL ==== */
+
+
+body {
+    background-color: var(--fond-principal);
 }
 
 .affichage {
@@ -73,8 +94,6 @@ button {
     padding: 5px 25px 5px 25px;
     border-radius: 5px;
 }
-
-
 
 
 /* au survol et au clic */
