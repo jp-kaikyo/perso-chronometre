@@ -114,7 +114,7 @@ a:active {
     padding: 20px 30px 20px 30px;
     border-radius: 100px;
     margin: 2% ;
-    transition: 1s;
+    transition: 0.6s;
 }
 
 .btn_jeux {
@@ -128,7 +128,8 @@ a:active {
 .btn_base:hover {
     padding: 25px 35px 25px 35px;
     border-radius: 100px;
-    transition: 0.5s;
+    color: var(--objet-survol);
+    transition: 0.6s;
 }
 
 
@@ -137,7 +138,8 @@ a:active {
 .btn_base:active {
     padding: 15px 25px 15px 25px;
     border-radius: 100px;
-    transition: 0.5s;
+    color: var(--objet-clic);
+    transition: 0.4s;
 }
 
 
