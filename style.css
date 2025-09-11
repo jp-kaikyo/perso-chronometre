@@ -26,8 +26,8 @@
 :root {
     --police-titre: Georgia, "Times New Roman", serif;
     --police-texte: "Comic Sans MS", cursive, sans-serif;
-    --taille-titre-principal: 2.5rem;  /* h1 */
-    --taille-sous-titre: 2rem;         /* h2 */
+    --taille-titre-principal: 2rem;  /* h1 */
+    --taille-sous-titre: 1.5rem;         /* h2 */
     --taille-texte: 1rem;              /* p */
     --gras-titre: 700;
     --gras-texte: 400;
@@ -97,9 +97,37 @@ a:active {
     color:var(--font-contours);
     border: solid var(--font-contours);
     padding: 9px;
-    margin: 15% 25% 10% 25%;
+    margin: 10% 25% 25px 25%;
     text-align: center;
     border-radius: 50px;
+}
+
+.bulle_lien {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    background-color: var(--font-contenu);
+    border: solid var(--font-contours);
+    padding: 10px;
+    border-radius: 25px;
+    position: fixed;
+    bottom: 2%;
+    left: 35%;
+    right: 35%;
+    transition: 1s;
+}
+
+
+/* == hover == */
+
+.bulle_lien:hover {
+    border-radius: 50px;
+    position: fixed;
+    bottom: 2%;
+    left: 36%;
+    right: 36%;
+    transition: 1s;
 }
 
 
@@ -145,6 +173,52 @@ a:active {
 
 
 
+/* ==== PALETTE DES img ==== */
+
+
+img {
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.bulle_lien h2 {
+    grid-area: 1 / 1 / 2 / 5;
+    margin: auto;
+}
+
+.bulle_lien a:nth-child(2) { 
+    grid-area: 2 / 1;
+    margin: auto;
+}
+
+.bulle_lien a:nth-child(3) { 
+    grid-area: 2 / 2;
+    margin: auto;
+}
+.bulle_lien a:nth-child(4) { 
+    grid-area: 2 / 3;
+    margin: auto;
+}
+
+.bulle_lien a:nth-child(5) { 
+    grid-area: 2 / 4;
+    margin: auto;
+}
+
+
+/* == hover == */
+
+img:hover {
+    width: 55px;
+    height: 55px;
+    opacity: 50%;
+    transition: 0.5s;
+}
+
+
+
+
 /* ==== CSS body ==== */
 
 
@@ -155,7 +229,7 @@ body {
 .affichage {
     color: var(--texte-courant);
     border: solid 1px var(--objet-permanent);
-    margin: 3% 30% 3% 30%;
+    margin: 3% 25% 3% 25%;    
     padding: 10px 0px 10px 0px;
     border-radius: 25px;
 }
