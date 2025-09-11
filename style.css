@@ -97,7 +97,7 @@ a:active {
     color:var(--font-contours);
     border: solid var(--font-contours);
     padding: 9px;
-    margin: 10% 25% 25px 25%;
+    margin: 13% 25% 13% 25%;
     text-align: center;
     border-radius: 50px;
 }
@@ -106,15 +106,12 @@ a:active {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 15px;
+    gap: 5px;
     background-color: var(--font-contenu);
     border: solid var(--font-contours);
-    padding: 10px;
+    padding: 1px;
+    margin: 5% 35% 1% 35%;
     border-radius: 25px;
-    position: fixed;
-    bottom: 2%;
-    left: 35%;
-    right: 35%;
     transition: 1s;
 }
 
@@ -147,10 +144,7 @@ a:active {
 
 .bulle_lien:hover {
     border-radius: 50px;
-    position: fixed;
-    bottom: 2%;
-    left: 36%;
-    right: 36%;
+    margin: 5% 36% 1% 36%;
     transition: 1s;
 }
 
@@ -196,8 +190,8 @@ a:active {
 
 
 img {
-    width: 50px;
-    height: 50px;
+    width: 43px;
+    height: 43px;
     transition: 0.5s;
 }
 
@@ -205,8 +199,8 @@ img {
 /* == hover == */
 
 img:hover {
-    width: 55px;
-    height: 55px;
+    width: 46px;
+    height: 46px;
     opacity: 50%;
     transition: 0.5s;
 }
@@ -217,7 +211,13 @@ img:hover {
 /* ==== CSS body ==== */
 
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    overflow-x: hidden; /* Évite les barres de scroll horizontales */
     background-color: var(--fond-principal);
 }
 
