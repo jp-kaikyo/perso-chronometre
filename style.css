@@ -23,15 +23,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
 :root {
     --police-titre: Georgia, "Times New Roman", serif;
     --police-texte: "Comic Sans MS", cursive, sans-serif;
-    --taille-titre-principal: 2rem;  /* h1 */
+    --taille-titre-principal: 2rem;      /* h1 */
     --taille-sous-titre: 1.5rem;         /* h2 */
-    --taille-texte: 1rem;              /* p */
+    --taille-texte: 1rem;                /* p */
+    --taille-liens:1rem;                 /* a */
     --gras-titre: 700;
     --gras-texte: 400;
 }
+
+@media(max-width:768px){
+    :root {
+    --taille-titre-principal: 1.25rem;  /* h1 */
+    --taille-sous-titre: 1rem;         /* h2 */
+    --taille-texte: 0.75rem;              /* p */
+    --taille-liens: 0.75rem;                 /* a */
+}}
 
 
 /* style titre */
@@ -61,9 +71,7 @@ p, span {
     line-height: 1.6;
 }
 
-
 /* style lien */
-
 a {
     font-style: oblique;
     font-weight: 500;
@@ -88,7 +96,6 @@ a:active {
 
 
 
-
 /* ==== PALETTE DES BULLE ==== */
 
 
@@ -96,10 +103,17 @@ a:active {
     background-color: var(--font-contenu);
     color:var(--font-contours);
     border: solid var(--font-contours);
-    padding: 9px;
+    padding: 6px;
     margin: 13% 25% 10% 25%;
     text-align: center;
     border-radius: 50px;
+}
+
+@media(max-width:768px){
+    .bulle_principal {
+        padding: 6px;
+        margin: 1% 2% 100% 2%;
+    }
 }
 
 .bulle_lien {
@@ -109,10 +123,21 @@ a:active {
     gap: 5px;
     background-color: var(--font-contenu);
     border: solid var(--font-contours);
-    padding: 1px;
+    padding: 2px;
     margin: 5% 35% 1% 35%;
     border-radius: 25px;
     transition: 1s;
+}
+
+@media(max-width:768px){
+    .bulle_lien {
+        padding: 2px;
+        margin: 1% 25% 1% 25%;
+    }
+ 
+    h2 {
+        font-size: 0.80rem; 
+    }
 }
 
 .bulle_lien h2 {
@@ -148,6 +173,17 @@ a:active {
     transition: 1s;
 }
 
+@media(max-width:768px){
+    .bulle_lien:hover {
+        padding: 2px;
+        margin: 1% 30% 1% 30%;
+    }
+ 
+    h2 {
+        font-size: 0.70rem; 
+    }
+}
+
 
 
 
@@ -157,52 +193,88 @@ a:active {
 .btn_base {
     background-color: var(--font-contenu);
     color: var(--objet-permanent);
-    padding: 20px 30px 20px 30px;
     border-radius: 100px;
-    margin: 2% ;
+    padding: 20px 30px 20px 30px;
     transition: 0.6s;
+}
+
+@media(max-width:768px){
+    .btn_base {
+        padding: 10px 20px 10px 20px;
+    }
+}
+
+.btn {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 
 /* survol */
 
 .btn_base:hover {
-    padding: 25px 35px 25px 35px;
-    border-radius: 100px;
+    padding: 24px 34px 24px 34px;
     color: var(--objet-survol);
     transition: 0.6s;
+}
+
+@media(max-width:768px){
+    .btn_base:hover {
+        padding: 14px 24px 14px 24px;
+        color: var(--objet-clic);
+        transition: 0.4s;
+    }
 }
 
 
 /* clic */
 
 .btn_base:active {
-    padding: 15px 25px 15px 25px;
-    border-radius: 100px;
+    padding: 16px 26px 16px 26px;
     color: var(--objet-clic);
     transition: 0.4s;
+}
+
+@media(max-width:768px){
+    .btn_base:active {
+    padding: 6px 16px 6px 16px;
+    }
 }
 
 
 
 
-/* ==== PALETTE DES img ==== */
+/* ==== PALETTE DES LOGO ==== */
 
 
-img {
-    width: 43px;
-    height: 43px;
+.logo {
+    width: 48px;
+    height: 48px;
     transition: 0.5s;
+}
+
+@media(max-width:768px){
+    .logo {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 
 /* == hover == */
 
-img:hover {
-    width: 46px;
-    height: 46px;
+.logo:hover {
+    width: 52px;
+    height: 52px;
     opacity: 50%;
     transition: 0.5s;
+}
+
+@media(max-width:768px){
+    .logo:hover {
+        width: 26px;
+        height: 26px;
+    }
 }
 
 
@@ -228,6 +300,12 @@ body {
     margin: 3% 25% 3% 25%;    
     padding: 10px 0px 10px 0px;
     border-radius: 25px;
+}
+
+@media(max-width:768px){
+    .affichage {
+    font-size: 8px;
+    }
 }
 
 #temps {
